@@ -1,80 +1,62 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="レースドール陶芸作家・桒原照子の作品と活動を紹介する公式ホームページ">
-<title>レースドール陶芸｜桒原 照子</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#151311">
+<meta name="description" content="レースドール陶芸作家・桒原照子。磁器とレースが織りなす繊細な作品世界。">
+<title>桒原照子｜Lace Doll Porcelain Art</title>
 <style>
-:root{--ink:#382f2d;--sub:#756967;--rose:#9b6668;--cream:#f8f5f0;--gold:#b59a67;--line:#ded5cb}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;line-height:1.9}
-a{color:inherit}.wrap{width:min(1120px,90%);margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);border-bottom:1px solid #eee;backdrop-filter:blur(10px)}
-.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:19px;letter-spacing:.12em;text-decoration:none}.menu{display:flex;gap:22px;font-size:13px}.menu a{text-decoration:none}
-.hero{min-height:82vh;display:grid;grid-template-columns:1fr 1.08fr;background:var(--cream)}
-.hero-copy{display:flex;align-items:center;padding:8vw}.eyebrow{font:12px/1.5 Arial,sans-serif;letter-spacing:.28em;color:var(--rose);text-transform:uppercase}
-h1{font-weight:400;font-size:clamp(38px,5vw,74px);line-height:1.28;margin:.3em 0}.en{font:14px/1.7 Georgia,serif;letter-spacing:.13em;color:var(--sub)}
-.hero-image{min-height:580px;background:url("assets/work-03.jpg") center/cover no-repeat}
-section{padding:100px 0}.section-head{text-align:center;margin-bottom:52px}.section-head small{font:11px Arial,sans-serif;letter-spacing:.3em;color:var(--rose)}h2{font-weight:400;font-size:clamp(28px,4vw,44px);margin:.2em 0}
-.lead{max-width:760px;margin:auto;text-align:center;color:var(--sub)}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}.card{margin:0}.card img{width:100%;height:560px;object-fit:contain;background:#f7f5f2;display:block}.card figcaption{padding:18px 2px}.card strong{font-weight:400;font-size:20px}.card span{display:block;color:var(--sub);font-size:13px}
-.story{background:var(--cream)}.story-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}.story-aside{border-top:1px solid var(--gold);padding-top:20px}.story-aside p{font-size:25px;line-height:1.7;margin:0}.story-text h3{font-weight:400;font-size:25px;margin-top:0}.story-text p{color:#5f5552}
-.fact{margin:28px 0;padding:25px 28px;background:#fff;border-left:2px solid var(--gold)}
-.artist{text-align:center}.artist-copy{max-width:760px;margin:auto}.artist-name{font-size:34px;letter-spacing:.15em}
-.quote{font-size:clamp(24px,3vw,38px);line-height:1.7;color:#594b48;margin:45px auto;max-width:850px}
-.contact{background:#312b2a;color:#f7f2eb;text-align:center}.contact p{color:#d9ceca}.contact .note{font-size:13px}
-footer{text-align:center;padding:26px;font:11px Arial,sans-serif;letter-spacing:.12em;color:#8c807d}
-@media(max-width:760px){.menu{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:70px 7%}.hero-image{min-height:55vh;order:-1}.gallery{grid-template-columns:1fr}.card img{height:auto;max-height:650px}.story-grid{grid-template-columns:1fr;gap:35px}section{padding:72px 0}}
+:root{--paper:#f6f2eb;--ink:#1d1a18;--muted:#756e67;--gold:#a68a58;--wine:#6e3e43}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;line-height:1.9}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+header{position:fixed;z-index:50;top:0;width:100%;padding:22px 4vw;display:flex;justify-content:space-between;align-items:center;color:white;background:linear-gradient(#0008,transparent)}
+.logo{letter-spacing:.18em;font-size:14px}.nav{display:flex;gap:25px;font:11px Arial,sans-serif;letter-spacing:.18em}.nav a{opacity:.86}.nav a:hover{opacity:1}
+.hero{height:100svh;min-height:680px;position:relative;background:#171513 url("assets/work-03.jpg") center 35%/cover no-repeat;color:white;display:flex;align-items:flex-end}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0c0a09c9 0%,#0c0a095c 42%,transparent 72%),linear-gradient(0deg,#0c0a09aa,transparent 45%)}
+.heroText{position:relative;z-index:2;padding:0 7vw 9vh;max-width:900px}.kicker{font:11px Arial,sans-serif;letter-spacing:.38em;color:#e1c99b}.hero h1{font-size:clamp(43px,7vw,92px);font-weight:400;line-height:1.12;margin:.25em 0}.hero .en{font:italic 18px Georgia,serif;letter-spacing:.08em}.scroll{position:absolute;z-index:2;right:4vw;bottom:7vh;writing-mode:vertical-rl;font:10px Arial;letter-spacing:.25em}
+section{padding:120px 6vw}.intro{max-width:920px;margin:auto;text-align:center}.eyebrow{font:10px Arial;letter-spacing:.35em;color:var(--wine);text-transform:uppercase}.intro h2,.title h2{font-size:clamp(31px,4vw,54px);font-weight:400;line-height:1.4}.intro .big{font-size:clamp(20px,2.6vw,32px);line-height:1.9;margin:45px auto}.enText{font-family:Georgia,serif;font-style:italic;color:var(--muted)}
+.gallery{padding:0;background:#151311;color:#f4eee6}.galleryGrid{display:grid;grid-template-columns:1fr 1fr}.work{position:relative;min-height:80vh;overflow:hidden;background:#222}.work img{width:100%;height:100%;position:absolute;object-fit:cover;transition:transform 1.2s}.work:nth-child(2) img,.work:nth-child(4) img{object-fit:contain;background:#eee9e2}.work:hover img{transform:scale(1.025)}.cap{position:absolute;z-index:2;left:35px;bottom:30px;text-shadow:0 2px 20px #000}.cap b{font-weight:400;font-size:24px}.cap small{display:block;font:10px Arial;letter-spacing:.22em}
+.history{background:#eee7dd}.split{max-width:1120px;margin:auto;display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw}.title{position:sticky;top:120px;align-self:start}.body h3{font-weight:400;font-size:27px;margin-top:55px}.body p{color:#504a45}.quote{border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:30px 0;margin:45px 0;font-size:23px}.fact{background:#f8f5f0;padding:30px;margin:30px 0}
+.artist{background:#fff}.artistInner{max-width:950px;margin:auto;text-align:center}.name{font-size:clamp(38px,6vw,70px);letter-spacing:.16em}.signature{font:italic 20px Georgia;color:var(--muted);margin-top:-20px}.artist p{max-width:700px;margin:30px auto;color:#5d5651}
+.share{background:#211d1a;color:#eee6dd;text-align:center}.share img{width:170px;margin:35px auto 18px;border:12px solid white}.share .url{font:12px Arial;color:#bdb3aa;word-break:break-all}
+footer{padding:35px;text-align:center;font:10px Arial;letter-spacing:.2em;color:#8d837a}
+.reveal{opacity:0;transform:translateY(30px);transition:1s}.reveal.on{opacity:1;transform:none}
+@media(max-width:760px){header{padding:18px 5vw}.nav{display:none}.hero{min-height:720px;background-position:57% center}.hero:after{background:linear-gradient(0deg,#090807df 0%,transparent 70%)}.heroText{padding:0 7vw 8vh}.galleryGrid{grid-template-columns:1fr}.work{min-height:70vh}.split{grid-template-columns:1fr}.title{position:static}.history,section{padding:80px 7vw}.cap{left:22px}.gallery{padding:0}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#">レースドール陶芸　桒原 照子</a><nav class="menu"><a href="#works">作品</a><a href="#history">レースドールとは</a><a href="#artist">作家紹介</a><a href="#contact">お問い合わせ</a></nav></div></header>
-
+<header><a class="logo" href="#">桒原 照子</a><nav class="nav"><a href="#collection">COLLECTION</a><a href="#story">STORY</a><a href="#artist">ARTIST</a><a href="#share">SHARE</a></nav></header>
 <main>
 <section class="hero">
-  <div class="hero-copy"><div><div class="eyebrow">Porcelain Lace Art</div><h1>レースが、<br>永遠の磁器になる。</h1><p class="en">RAISE / LACE DOLL CERAMIC ART<br>TERUKO KUWAHARA</p><p>繊細なレース、優雅な衣装、やわらかな表情。<br>桒原照子が手仕事で生み出す、磁器の人形世界。</p></div></div>
-  <div class="hero-image" role="img" aria-label="桒原照子 レースドール作品"></div>
+<div class="heroText"><div class="kicker">LACE DOLL · PORCELAIN ART</div><h1>レースが炎をくぐり、<br>永遠の磁器になる。</h1><div class="en">Lace passes through fire,<br>becoming porcelain for eternity.</div></div><div class="scroll">SCROLL TO DISCOVER</div>
 </section>
+<section><div class="intro reveal"><div class="eyebrow">The Art of Porcelain Lace</div><h2>やわらかな布の記憶を、<br>硬質な磁器の中に。</h2><p class="big">レースのひだ、衣装の流れ、人物のまなざし。<br>桒原照子が一体一体に物語を宿す、レースドール陶芸の世界。</p><p class="enText">Delicate folds of lace, graceful silhouettes and quiet expressions.<br>Each work preserves a fleeting softness in porcelain.</p></div></section>
 
-<section id="works"><div class="wrap">
-  <div class="section-head"><small>SELECTED WORKS</small><h2>作品</h2><p class="lead">衣装のひだ、レースの透け感、人物の表情まで。一体一体に異なる物語を宿す作品をご覧ください。</p></div>
-  <div class="gallery">
-    <figure class="card"><img src="assets/work-01.jpg" alt="女性と子どもを表現したレースドール作品"><figcaption><strong>作品 I</strong><span>正式な作品名は後から掲載できます</span></figcaption></figure>
-    <figure class="card"><img src="assets/work-02.jpg" alt="赤いドレスのレースドール作品"><figcaption><strong>作品 II</strong><span>華やかな赤のドレスと磁器レースの造形</span></figcaption></figure>
-    <figure class="card"><img src="assets/work-03.jpg" alt="女性と子どもたちを表現したレースドール作品"><figcaption><strong>作品 III</strong><span>人物群と細密な衣装表現による作品</span></figcaption></figure>
-    <figure class="card"><img src="assets/work-04.jpg" alt="白いドレスのレースドール作品"><figcaption><strong>作品 IV</strong><span>白と銀を基調とした繊細なドレス表現</span></figcaption></figure>
-  </div>
+<section class="gallery" id="collection"><div class="galleryGrid">
+<article class="work"><img src="assets/work-01.jpg" alt="桒原照子 レースドール作品1"><div class="cap"><small>COLLECTION 01</small><b>Lady & Children</b></div></article>
+<article class="work"><img src="assets/work-02.jpg" alt="桒原照子 レースドール作品2"><div class="cap"><small>COLLECTION 02</small><b>The Red Dress</b></div></article>
+<article class="work"><img src="assets/work-03.jpg" alt="桒原照子 レースドール作品3"><div class="cap"><small>COLLECTION 03</small><b>A Gathering of Angels</b></div></article>
+<article class="work"><img src="assets/work-04.jpg" alt="桒原照子 レースドール作品4"><div class="cap"><small>COLLECTION 04</small><b>The White Gown</b></div></article>
 </div></section>
 
-<section class="story" id="history"><div class="wrap">
-  <div class="section-head"><small>HISTORY & TECHNIQUE</small><h2>レースドールの由来と魅力</h2></div>
-  <div class="story-grid">
-    <aside class="story-aside"><p>布のレースは炎の中で消え、<br>その「かたち」だけが磁器として残る。</p></aside>
-    <div class="story-text">
-      <h3>ヨーロッパの磁器文化から生まれた、繊細な造形美</h3>
-      <p>ヨーロッパでは18世紀、ドイツのマイセンを中心に硬質磁器の製造と磁器彫刻が発展しました。マイセン磁器製作所は1710年に創設され、1730年代にはバロック様式の大規模な磁器彫刻が制作されています。こうした人物像や装飾磁器の文化が、後世の華麗な磁器人形へとつながっていきます。</p>
-      <p>現在「ポーセリン・レース」「ドレスデン・レース」などと呼ばれる技法では、本物の綿レースを液状の磁土（ポーセリンスリップ）に浸し、人形の衣装として一枚ずつ形づくります。窯で焼くと布の繊維そのものは燃えてなくなり、磁器だけがレースの網目やひだを写し取って残ります。</p>
-      <div class="fact"><strong>レースドールの不思議</strong><br>完成したドレスは「レースのように見える磁器」ではありません。制作時には本物の布レースが使われ、その繊細な構造を磁器へ置き換えているところに、この技法ならではの魅力があります。</div>
-      <h3>美しさと難しさは表裏一体</h3>
-      <p>磁土が多すぎればレースの細かな穴が埋まり、少なすぎれば焼成後に欠けや途切れが生じます。さらに、焼成後の磁器レースは非常に繊細です。ドレスの重なり、袖、襟、花びらなどを破綻なくまとめるには、素材への理解と根気のいる手仕事が欠かせません。</p>
-      <p>そのためレースドールは、単なる「人形」ではなく、彫刻・陶芸・衣装造形が一つになった磁器芸術として楽しむことができます。柔らかな布の一瞬の表情を、硬い磁器の中に永く留める――その逆説的な美しさも大きな魅力です。</p>
-    </div>
-  </div>
-</div></section>
+<section class="history" id="story"><div class="split">
+<div class="title reveal"><div class="eyebrow">History & Technique</div><h2>レースドールの<br>由来と技法</h2><p class="enText">From European porcelain culture to the delicate art of porcelain lace.</p></div>
+<div class="body reveal">
+<h3>01 — “白い金”と呼ばれた磁器</h3><p>17世紀のヨーロッパでは、中国からもたらされた白い磁器が王侯貴族を魅了しました。ザクセンでは研究が進められ、1708年にヨーロッパ硬質磁器の焼成に成功。1710年、アウグスト強王によってマイセン磁器製作所が創設されます。</p>
+<p class="enText">European fascination with Asian porcelain eventually led to the successful firing of European hard-paste porcelain in Saxony and the founding of the Meissen manufactory in 1710.</p>
+<div class="quote">布は炎の中で消える。<br>けれど、その繊細な姿は磁器として残る。<br><span class="enText">The fabric disappears in the kiln; its delicate form remains in porcelain.</span></div>
+<h3>02 — 本物のレースから生まれる造形</h3><p>ポーセリン・レースの制作では、布レースに液状の磁土を含ませ、衣装のひだや重なりを造形します。焼成の過程で有機物である布は失われ、磁器化した部分がレースの細かな構造を写し取って残ります。</p>
+<div class="fact"><b>ART NOTE / 見どころ</b><br>作品を見るときは、ドレス全体だけでなく、袖口、裾、フリルの重なり、花びらのような細部にも注目してください。柔らかさを硬い素材で表現するという、レースドールならではの逆説的な美しさがあります。</div>
+<h3>03 — 磁器人形という小さな舞台</h3><p>18世紀のマイセンでは人物や動物などの磁器彫刻が発展し、宮廷文化や物語を小さな彫刻の中に表現しました。桒原照子の作品にも、人物同士の視線や身振り、衣装の動きによって、一場面の物語を見るような魅力があります。</p>
+<p class="enText">A porcelain figure can be a miniature stage: gesture, costume and expression come together to suggest a story beyond the object itself.</p>
+</div></div></section>
 
-<section class="artist" id="artist"><div class="wrap artist-copy">
-  <div class="section-head"><small>ARTIST</small><h2>作家紹介</h2></div>
-  <div class="artist-name">桒原 照子</div><p class="en">TERUKO KUWAHARA</p>
-  <p>レースドール陶芸の繊細な技法を用い、人物の表情、衣装の流れ、レースの重なりまで丁寧に形づくる。作品ごとに異なる情景と物語を大切にし、磁器ならではの透明感と優雅さを生かした作品制作を続けています。</p>
-  <div class="quote">「やわらかなレースの記憶を、<br>磁器の中にいつまでも。」</div>
-  <p style="font-size:13px;color:#8a7e7b">※作家略歴・受賞歴・展示歴などは、情報をいただき次第ここへ追加できます。</p>
-</div></section>
+<section class="artist" id="artist"><div class="artistInner reveal"><div class="eyebrow">Artist</div><div class="name">桒原 照子</div><div class="signature">Teruko Kuwahara</div><p>レースドール陶芸の繊細な技法を用い、人物の表情、衣装の流れ、レースの重なりまで丁寧に形づくる。磁器の透明感と華やかな装飾性を生かしながら、一体ごとに異なる情景と物語を表現しています。</p><p class="enText">Teruko Kuwahara creates porcelain lace dolls with close attention to expression, movement and the layered delicacy of costume, giving each work its own atmosphere and story.</p><p style="font-size:12px">※略歴・受賞歴・展示歴は、確認できた情報から随時追加できます。</p></div></section>
 
-<section class="contact" id="contact"><div class="wrap">
-  <div class="section-head"><small>CONTACT</small><h2>お問い合わせ</h2></div>
-  <p>作品・展示・活動についてのお問い合わせ</p>
-  <p class="note">メールアドレス等の連絡先は、公開内容を確認後に掲載できます。</p>
-</div></section>
+<section class="share" id="share"><div class="reveal"><div class="eyebrow" style="color:#d1b47d">Share the Gallery</div><h2>作品世界を、いつでも。</h2><p>スマートフォンのカメラでQRコードを読み取ると、このギャラリーをご覧いただけます。</p><img src="assets/qr.png" alt="公式ホームページQRコード"><div class="url">kuwahara1022-cloud.github.io/raise-doll-teruko/</div></div></section>
 </main>
-<footer>© TERUKO KUWAHARA. All Rights Reserved.</footer>
+<footer>© TERUKO KUWAHARA · LACE DOLL PORCELAIN ART</footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+</script>
 </body></html>
