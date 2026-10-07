@@ -22,17 +22,16 @@ footer{padding:35px;text-align:center;font:10px Arial;letter-spacing:.2em;color:
 .reveal{opacity:0;transform:translateY(30px);transition:1s}.reveal.on{opacity:1;transform:none}
 @media(max-width:760px){header{padding:18px 5vw}.nav{display:none}.hero{min-height:720px;background-position:57% center}.hero:after{background:linear-gradient(0deg,#090807df 0%,transparent 70%)}.heroText{padding:0 7vw 8vh}.galleryGrid{grid-template-columns:1fr}.work{min-height:70vh}.split{grid-template-columns:1fr}.title{position:static}.history,section{padding:80px 7vw}.cap{left:22px}.gallery{padding:0}}
 
-/* Ver.4 hero slideshow */
-.hero{position:relative;overflow:hidden}
+/* Top slideshow */
+.hero{position:relative;overflow:hidden;background:#171513!important}
 .hero-slides{position:absolute;inset:0;z-index:0}
-.hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity 1.6s ease,transform 7s ease}
-.hero-slide.active{opacity:1;transform:scale(1.12)}
-.hero-content,.hero-copy{position:relative;z-index:2}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-.hero-action{display:inline-block;padding:14px 22px;border:1px solid rgba(255,255,255,.8);color:#fff;font:11px Arial,sans-serif;letter-spacing:.14em;background:rgba(0,0,0,.15);backdrop-filter:blur(3px);transition:.3s}
-.hero-action:hover{background:#fff;color:#171411}
-.hero-action.primary{background:#fff;color:#171411}
-.hero-action.primary:hover{background:#eadfce}
+.hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.03);transition:opacity 1.5s ease,transform 6.5s ease}
+.hero-slide.active{opacity:1;transform:scale(1.10)}
+.hero:after{z-index:1}
+.heroText,.scroll{z-index:2}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-action{padding:14px 20px;border:1px solid rgba(255,255,255,.8);color:white;font:11px Arial,sans-serif;letter-spacing:.13em;background:rgba(0,0,0,.18)}
+.hero-action.primary{background:white;color:#171411}
 
 </style>
 </head>
@@ -40,19 +39,23 @@ footer{padding:35px;text-align:center;font:10px Arial;letter-spacing:.2em;color:
 <header><a class="logo" href="#">桒原 照子</a><nav class="nav"><a href="#collection">COLLECTION</a><a href="#story">STORY</a><a href="#artist">ARTIST</a><a href="#share">SHARE</a></nav></header>
 <main>
 <section class="hero">
-<div class="heroText"><div class="kicker">LACE DOLL · PORCELAIN ART</div><h1>レースが炎をくぐり、<br>永遠の磁器になる。</h1><div class="en">Lace passes through fire,<br>becoming porcelain for eternity.</div></div><div class="scroll">SCROLL TO DISCOVER</div>
+<div class="hero-slides" aria-hidden="true">
+<img class="hero-slide active" src="assets/work-03.jpg" alt="">
+<img class="hero-slide" src="assets/work-01.jpg" alt="">
+<img class="hero-slide" src="assets/work-02.jpg" alt="">
+<img class="hero-slide" src="assets/work-04.jpg" alt="">
+</div>
+<div class="heroText"><div class="kicker">LACE DOLL · PORCELAIN ART</div><h1>レースが炎をくぐり、<br>永遠の磁器になる。</h1><div class="en">Lace passes through fire,<br>becoming porcelain for eternity.</div><div class="hero-actions">
+<a class="hero-action" href="#collection">作品を見る / COLLECTION</a>
+<a class="hero-action primary" href="#commission">制作を依頼する / COMMISSION</a>
+</div></div><div class="scroll">SCROLL TO DISCOVER</div>
 </section>
 <section><div class="intro reveal"><div class="eyebrow">The Art of Porcelain Lace</div><h2>やわらかな布の記憶を、<br>硬質な磁器の中に。</h2><p class="big">レースのひだ、衣装の流れ、人物のまなざし。<br>桒原照子が一体一体に物語を宿す、レースドール陶芸の世界。</p><p class="enText">Delicate folds of lace, graceful silhouettes and quiet expressions.<br>Each work preserves a fleeting softness in porcelain.</p></div></section>
 
 <section class="gallery" id="collection"><div class="galleryGrid">
 <article class="work"><img src="assets/work-01.jpg" alt="桒原照子 レースドール作品1"><div class="cap"><small>COLLECTION 01</small><b>Lady & Children</b></div></article>
 <article class="work"><img src="assets/work-02.jpg" alt="桒原照子 レースドール作品2"><div class="cap"><small>COLLECTION 02</small><b>The Red Dress</b></div></article>
-<article class="work"><div class="hero-slides" aria-hidden="true">
-<img class="hero-slide active" src="assets/work-03.jpg" alt="">
-<img class="hero-slide" src="assets/work-01.jpg" alt="">
-<img class="hero-slide" src="assets/work-02.jpg" alt="">
-<img class="hero-slide" src="assets/work-04.jpg" alt="">
-</div><div class="cap"><small>COLLECTION 03</small><b>A Gathering of Angels</b></div></article>
+<article class="work"><img src="assets/work-03.jpg" alt="桒原照子 レースドール作品3"><div class="cap"><small>COLLECTION 03</small><b>A Gathering of Angels</b></div></article>
 <article class="work"><img src="assets/work-04.jpg" alt="桒原照子 レースドール作品4"><div class="cap"><small>COLLECTION 04</small><b>The White Gown</b></div></article>
 </div></section>
 
@@ -88,17 +91,16 @@ footer{padding:35px;text-align:center;font:10px Arial;letter-spacing:.2em;color:
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
 </script>
-
 <script>
 (function(){
-  const slides=[...document.querySelectorAll('.hero-slide')];
-  if(slides.length<2) return;
-  let i=0;
-  setInterval(()=>{
-    slides[i].classList.remove('active');
-    i=(i+1)%slides.length;
-    slides[i].classList.add('active');
-  },5000);
+ const slides=Array.from(document.querySelectorAll('.hero .hero-slide'));
+ if(slides.length<2)return;
+ let i=0;
+ setInterval(function(){
+   slides[i].classList.remove('active');
+   i=(i+1)%slides.length;
+   slides[i].classList.add('active');
+ },5000);
 })();
 </script>
 
