@@ -21,6 +21,19 @@ section{padding:120px 6vw}.intro{max-width:920px;margin:auto;text-align:center}.
 footer{padding:35px;text-align:center;font:10px Arial;letter-spacing:.2em;color:#8d837a}
 .reveal{opacity:0;transform:translateY(30px);transition:1s}.reveal.on{opacity:1;transform:none}
 @media(max-width:760px){header{padding:18px 5vw}.nav{display:none}.hero{min-height:720px;background-position:57% center}.hero:after{background:linear-gradient(0deg,#090807df 0%,transparent 70%)}.heroText{padding:0 7vw 8vh}.galleryGrid{grid-template-columns:1fr}.work{min-height:70vh}.split{grid-template-columns:1fr}.title{position:static}.history,section{padding:80px 7vw}.cap{left:22px}.gallery{padding:0}}
+
+/* Ver.4 hero slideshow */
+.hero{position:relative;overflow:hidden}
+.hero-slides{position:absolute;inset:0;z-index:0}
+.hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity 1.6s ease,transform 7s ease}
+.hero-slide.active{opacity:1;transform:scale(1.12)}
+.hero-content,.hero-copy{position:relative;z-index:2}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.hero-action{display:inline-block;padding:14px 22px;border:1px solid rgba(255,255,255,.8);color:#fff;font:11px Arial,sans-serif;letter-spacing:.14em;background:rgba(0,0,0,.15);backdrop-filter:blur(3px);transition:.3s}
+.hero-action:hover{background:#fff;color:#171411}
+.hero-action.primary{background:#fff;color:#171411}
+.hero-action.primary:hover{background:#eadfce}
+
 </style>
 </head>
 <body>
@@ -34,7 +47,12 @@ footer{padding:35px;text-align:center;font:10px Arial;letter-spacing:.2em;color:
 <section class="gallery" id="collection"><div class="galleryGrid">
 <article class="work"><img src="assets/work-01.jpg" alt="桒原照子 レースドール作品1"><div class="cap"><small>COLLECTION 01</small><b>Lady & Children</b></div></article>
 <article class="work"><img src="assets/work-02.jpg" alt="桒原照子 レースドール作品2"><div class="cap"><small>COLLECTION 02</small><b>The Red Dress</b></div></article>
-<article class="work"><img src="assets/work-03.jpg" alt="桒原照子 レースドール作品3"><div class="cap"><small>COLLECTION 03</small><b>A Gathering of Angels</b></div></article>
+<article class="work"><div class="hero-slides" aria-hidden="true">
+<img class="hero-slide active" src="assets/work-03.jpg" alt="">
+<img class="hero-slide" src="assets/work-01.jpg" alt="">
+<img class="hero-slide" src="assets/work-02.jpg" alt="">
+<img class="hero-slide" src="assets/work-04.jpg" alt="">
+</div><div class="cap"><small>COLLECTION 03</small><b>A Gathering of Angels</b></div></article>
 <article class="work"><img src="assets/work-04.jpg" alt="桒原照子 レースドール作品4"><div class="cap"><small>COLLECTION 04</small><b>The White Gown</b></div></article>
 </div></section>
 
@@ -70,4 +88,18 @@ footer{padding:35px;text-align:center;font:10px Arial;letter-spacing:.2em;color:
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
 </script>
+
+<script>
+(function(){
+  const slides=[...document.querySelectorAll('.hero-slide')];
+  if(slides.length<2) return;
+  let i=0;
+  setInterval(()=>{
+    slides[i].classList.remove('active');
+    i=(i+1)%slides.length;
+    slides[i].classList.add('active');
+  },5000);
+})();
+</script>
+
 </body></html>
